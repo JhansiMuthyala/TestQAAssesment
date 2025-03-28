@@ -60,7 +60,8 @@
 							"\r",
 							"pm.test(\"Response body is not empty\", function () {\r",
 							"    pm.expect(pm.response.text()).to.not.be.empty;\r",
-							"});"
+							"});\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -91,6 +92,78 @@
 					"path": [
 						"api",
 						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get State By Postal_Codes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Parse the API response\r",
+							"var responseBody = pm.response.json();\r",
+							"console.log(\"API Response:\", responseBody); // Logs response in Postman Console\r",
+							"\r",
+							"// Expected values\r",
+							"var expectedStateNm = \"Selangor\";\r",
+							"var expectedStateCd = \"SEL\";\r",
+							"var expectedCity = \"BESTARI JAYA\";\r",
+							"var expectedPostCode = \"45600\";\r",
+							"\r",
+							"// If response is an [array], get the first object\r",
+							"if (Array.isArray(responseBody) && responseBody.length > 0) {\r",
+							"    responseBody = responseBody[0];\r",
+							"}\r",
+							"\r",
+							"// Verifying if responseBody contains required fields\r",
+							"pm.test(\"Response contains Expected Values in fields\", function () {\r",
+							"    pm.expect(responseBody).to.have.property(\"stateNm\");\r",
+							"    pm.expect(responseBody).to.have.property(\"stateCd\");\r",
+							"    pm.expect(responseBody).to.have.property(\"city\");\r",
+							"    pm.expect(responseBody).to.have.property(\"postCode\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"postCode\": \"{{PostCode}}\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/getStateByPostcode",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"getStateByPostcode"
 					]
 				}
 			},
