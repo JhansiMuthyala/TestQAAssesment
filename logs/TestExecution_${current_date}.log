@@ -1,0 +1,15 @@
+2025-03-29 03:52:44 [main] INFO  com.testng.qa.Test.RateCalculator - Initiated Chrome Browser
+2025-03-29 03:52:49 [main] INFO  com.testng.qa.Test.RateCalculator - Navigated to URL rateCalculator
+2025-03-29 03:52:52 [main] INFO  com.testng.qa.Test.RateCalculator - Cleared existing value in 'To Country' field
+2025-03-29 03:52:55 [main] INFO  com.testng.qa.Test.RateCalculator - Entered 'India' in 'To Country' field
+2025-03-29 03:53:01 [main] INFO  com.testng.qa.Test.RateCalculator - Selected 'India - IN' from dropdown
+2025-03-29 03:53:01 [main] INFO  com.testng.qa.Test.RateCalculator - Entered From PostCode
+2025-03-29 03:53:01 [main] INFO  com.testng.qa.Test.RateCalculator - Entered Item Weight
+2025-03-29 03:53:04 [main] INFO  com.testng.qa.Test.RateCalculator - Clicked on Calculate Button
+2025-03-29 03:53:04 [main] INFO  com.testng.qa.Test.RateCalculator - Verified that multiple quotes are displayed
+2025-03-29 03:53:04 [main] INFO  com.testng.qa.Test.RateCalculator - Shipping Quotes:
+2025-03-29 03:53:04 [main] INFO  com.testng.qa.Test.RateCalculator - Service Type
+2025-03-29 03:53:04 [main] INFO  com.testng.qa.Test.RateCalculator - Service Type
+2025-03-29 03:53:04 [main] INFO  com.testng.qa.Test.RateCalculator - Service Type
+2025-03-29 03:53:05 [main] INFO  com.testng.qa.Test.RateCalculator - Closed Browser
+2025-03-29 03:53:05 [main] INFO  com.testng.qa.Test.RateCalculator - <------ Completed Execution ---------->
