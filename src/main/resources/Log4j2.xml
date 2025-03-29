@@ -2,7 +2,7 @@
 <Configuration status="WARN">
     <Properties>
         <Property name="logPath">logs</Property>
-        <Property name="logFileName">TestExecution_${current_date}.log</Property>
+        <Property name="logFileName">TestExecution.log</Property>
     </Properties>
 
     <Appenders>
